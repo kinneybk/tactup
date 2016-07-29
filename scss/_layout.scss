@@ -1,0 +1,205 @@
+// Global Styles
+button, a.button {
+  border-radius: $global-radius;
+  background-color: $purple;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+a {
+  transition: all .2s linear;
+}
+
+h2 {
+  font-family: $roboto;
+  text-transform: uppercase;
+}
+
+.form {
+  input[type="text"], input[type="password"], input[type="email"], textarea {
+    border-width: 3px;
+    border-radius: $global-radius;
+    font-weight: 300;
+    background-color: transparent;
+
+    height: 100%; // Firefox, IE
+
+    @media #{$medium-up} {
+      padding: rem-calc(13) rem-calc(20) rem-calc(12);
+      font-size: rem-calc(20);
+    }
+
+    &::placeholder {
+      color: $base;
+    }
+
+    &.error {
+      border-color: $alert-color !important;
+      box-shadow: inset 0 0 0 1px white;
+    }
+  }
+}
+
+
+// Header
+header {
+  box-shadow: 0 1px 0 rgba($black, 0.1);
+
+  .row .columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .row .columns {
+    height: rem-calc(50);
+  }
+
+  .logo img {
+    width: 124px;
+  }
+
+  @media #{$small-only} {
+    .logo:last-child {
+      margin: 0 auto;
+    }
+
+    .button.small {
+      padding-top: rem-calc(6);
+      padding-bottom: rem-calc(6);
+    }
+  }
+
+  @media #{$medium-up} {
+    .row .columns {
+      height: rem-calc(80);
+    }
+
+    .logo img {
+      height: 36px;
+    }
+  }
+}
+
+
+// Footer
+footer {
+  color: white;
+  background-color: $blue;
+  text-align: center;
+
+  .row .columns {
+    padding-top: rem-calc(30);
+    padding-bottom: rem-calc(20);
+
+    @media #{$medium-up} {
+      padding-top: rem-calc(60);
+      padding-bottom: rem-calc(30);
+    }
+  }
+
+  h2 {
+    margin-bottom: rem-calc(20);
+    color: inherit;
+
+    @media #{$medium-up} {
+      margin-bottom: rem-calc(40);
+    }
+  }
+
+  .social {
+    margin-bottom: rem-calc(20);
+    font-size: 0;
+
+    @media #{$medium-up} {
+      margin-bottom: rem-calc(50);
+    }
+
+    a {
+      display: inline-block;
+      width: 2em;
+      margin: 0 0.3333em 0.6667em;
+      font-size: rem-calc(30);
+      line-height: 2em;
+      border-radius: $global-rounded;
+      background-color: white;
+
+      @media #{$medium-up} {
+        font-size: rem-calc(40);
+      }
+
+      &:hover {
+        color: white !important;
+      }
+
+      &.fa-facebook {color: $facebook;
+        &:hover {background-color: $facebook;}}
+      &.fa-twitter {color: $twitter;
+        &:hover {background-color: $twitter;}}
+      &.fa-instagram {color: $instagram;
+        &:hover {background-color: $instagram;}}
+      &.fa-pinterest-p {color: $pinterest;
+        &:hover {background-color: $pinterest;}}
+      &.fa-vimeo {color: $vimeo;
+        &:hover {background-color: $vimeo;}}
+      &.fa-linkedin {color: $linkedin;
+        &:hover {background-color: $linkedin;}}
+    }
+  }
+
+  .navigation {
+    margin-bottom: rem-calc(30);
+    font-size: 0;
+
+    @media #{$medium-up} {
+      margin-bottom: rem-calc(40);
+    }
+
+    a {
+      padding: rem-calc(10) rem-calc(20);
+      border: 1px solid transparent;
+      border-radius: $global-radius;
+      color: inherit;
+      font-family: $roboto;
+      font-size: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $blue;
+        background-color: white;
+      }
+
+      @media #{$small-only} {
+        display: block;
+        border-color: white;
+
+        &:not(:last-child) {
+          margin-bottom: rem-calc(10);
+        }
+      }
+
+      @media #{$medium-up} {
+        font-size: rem-calc(20);
+
+        &:not(:last-child) {
+          margin-right: rem-calc(5);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-bottom: 0;
+    line-height: rem-calc(20);
+
+    .fa-heart {
+      color: $purple;
+      font-size: 1.3333em;
+      text-shadow: 1px 0 white, 1px 1px white, 0 1px white, -1px 1px white, -1px 0 white, -1px -1px white, 0 -1px white,  1px -1px white;
+    }
+  }
+}

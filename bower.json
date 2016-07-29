@@ -1,0 +1,11 @@
+{
+  "name": "tactup-sizzle",
+  "version": "1.0.0",
+  "private": "true",
+  "dependencies": {
+    "font-awesome": "~4.4.0",
+    "foundation": "zurb/bower-foundation",
+    "scrollreveal": "scrollReveal.js#~2.3.2",
+    "slick-carousel": "~1.5.8"
+  }
+}
